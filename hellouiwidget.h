@@ -15,12 +15,13 @@ public:
     explicit HelloUIWidget(QWidget *parent = nullptr);
     ~HelloUIWidget();
 
-private slots:
+private slots: //槽函数声明标志
     void on_pushButton_clicked();
+    void printText(const QString& text);
 
 private:
     Ui::HelloUIWidget *ui;
-    void AdjustLabel();
+    void updateLabel();
 };
 
 #endif // HELLOUIWIDGET_H
