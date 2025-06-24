@@ -15,7 +15,10 @@ public:
     explicit HelloUIWidget(QWidget *parent = nullptr);
     ~HelloUIWidget();
 
-private slots: //槽函数声明标志
+signals: //声明信号
+    void sendMsg(QString str);
+
+private slots: //声明槽函数
     void on_pushButton_clicked();
     void printText(const QString& text);
 

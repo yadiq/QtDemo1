@@ -28,7 +28,8 @@ void HelloUIWidget::updateLabel() {
 //自动关联槽函数
 void HelloUIWidget::on_pushButton_clicked()
 {
-    QMessageBox::information(this, tr("送餐"), tr("叮咚！外卖已送达"));
+    //QMessageBox::information(this, tr("送餐"), tr("叮咚！外卖已送达"));
+    emit sendMsg(tr("叮咚！外卖已送达"));
 }
 
 //手动管理槽函数
