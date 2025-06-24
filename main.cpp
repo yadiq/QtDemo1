@@ -1,4 +1,5 @@
 #include "hellouiwidget.h"
+#include "showmsg.h"
 
 #include <QApplication>
 
@@ -13,6 +14,9 @@ int main(int argc, char *argv[])
 
     HelloUIWidget huiw; //自定义窗口，使用ui绘制布局
     huiw.show();
+
+    ShowMsg sm;
+    QObject::connect(&huiw, SIGNAL(sendMsg(QString)), &sm, SLOT(recvMsg(QString)));//自定义信号
 
     return a.exec(); //进入Qt应用程序的事件循环函数等待用户操作（关闭窗口）
 }

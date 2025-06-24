@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     hellouiwidget.cpp \
     hellowidget.cpp \
-    main.cpp
+    main.cpp \
+    showmsg.cpp
 
 HEADERS += \
     hellouiwidget.h \
-    hellowidget.h
+    hellowidget.h \
+    showmsg.h
 
 FORMS += \
     hellouiwidget.ui
